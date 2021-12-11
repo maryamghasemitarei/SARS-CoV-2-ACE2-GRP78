@@ -1,0 +1,88 @@
+integrator               = md                                                                
+tinit                    = 0                                                                 
+dt                       = 0.002                                                            
+nsteps                   = 5000000                                                                                                                          
+init_step                = 0                                                                 
+comm-mode                = Linear                                                            
+nstcomm                  = 1                                                                 
+nstcalcenergy		  = 1                                                                     
+nstdhdl = 1                                                                                  
+comm-grps                = System                                                            
+                                                                                                                                                 
+emtol                    = 100                                                               
+emstep                   = 0.01                                                              
+
+niter                    = 0                                                                 
+fcstep                   = 0                                                                 
+nstcgsteep               = 1000
+nbfgscorr                = 10                                                                
+                                                                                                                       
+nstxout                  = 100000                                                             
+nstvout                  = 100000                                                             
+nstfout                  = 100000                                                             
+nstcheckpoint            = 10000                                                              
+nstlog                   = 10000                                                              
+nstenergy                = 10000                                                              
+nstxtcout                = 100000                                                            
+xtc-precision            = 10000                                                                                           
+xtc-grps                 = System                                                            
+energygrps               = RBD Water_and_ions                                                    
+                                                                                                                                                               
+cutoff-scheme = Verlet                                                                       
+nstlist                  = 10                                                                
+ns-type                  = Grid                                                                                                                         
+pbc                      = xyz                                                               
+rlist                    = 1.2                                                               
+                                                                                                                                                        
+coulombtype              = PME                                                               
+rcoulomb-switch          = 0                                                                 
+rcoulomb                 = 1.2                                                               
+epsilon-r                = 1                                                                 
+vdw-type                 = Cut-off                                                           
+vdw_modifier             = Potential-switch 
+                                                                          
+rvdw-switch              = 1.0                                                               
+rvdw                     = 1.2                                                               
+
+DispCorr                 = EnerPres                                                          
+table-extension          = 1                                                                 
+fourierspacing           = 0.12                                                                                                                            
+
+pme_order                = 4                                                                 
+ewald_rtol               = 1e-05                                                             
+ewald_geometry           = 3d                                                                
+epsilon_surface          = 0                                                                 
+optimize_fft             = no
+                                                                                             
+; Temperature coupling                                                                       
+tcoupl                   = Nose-Hoover                                                       
+tc-grps                  = System                                                            
+tau-t                    = 1.0                                                               
+ref-t                    = 310                                                               
+; Pressure coupling                                                                          
+Pcoupl                   = Parrinello-Rahman                                                 
+Pcoupltype               = Isotropic                                                         
+tau-p                    = 5                                                                 
+compressibility          = 4.5e-5                                                            
+ref-p                    = 1.0                                                          
+                                                                                             
+gen-temp                 = 310                                                                                                                       
+
+constraints              =   h-bonds                                                                                                                  
+constraint-algorithm     = LINCS                                                          
+                                                                               
+lincs-order              = 6                                                                                          
+lincs-iter               = 2                                                                                                                              
+lincs-warnangle          = 30                                                                                                                             
+
+; Free energy control stuff                                                                  
+free-energy              = yes                                                               
+init-lambda              = 0                                                                 
+delta-lambda             = 2e-7                                                       
+sc-alpha                 = 0.3                                                               
+sc-coul = yes                                                                                
+sc-sigma		 = 0.25                                                                      
+sc-power = 1             
+couple-lambda0 = vdw-q                                                                    
+couple-lambda1 = vdw-q 
+refcoord-scaling = com                                                                       
