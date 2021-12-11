@@ -1,0 +1,110 @@
+
+
+[ moleculetype ] ; added by Bjelkmar Jan 2010, from c32b1/toppar/stream/toppar_water_ions.str
+; molname	nrexcl
+OH		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge
+1		OC			1		OH			O1		 1		-1.32
+2		H			1		OH			H1		 1		 0.32
+
+[ bonds ]
+;i	j	funct	length	force.c.
+1	2	1	0.09700 456056	 ; hydroxyl bond
+
+[ moleculetype ]
+; molname	nrexcl
+LI		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		LIT			1		LI			LI		 1		1  
+
+[ moleculetype ]
+; molname	nrexcl
+NA		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		SOD			1		NA1			NA1		 1		1	 1.000   D_SOD  0  1.000
+2		SOD			2		NA2			NA2		 1		1	 1.000   D_SOD  0  1.000
+3		SOD			3		NA3			NA3		 1		1	 
+4		SOD			4		NA4			NA4		 1		1	 
+5		SOD			5		NA5			NA5		 1		1
+6		SOD			6		NA6			NA6		 1		1	 
+7		SOD			7		NA7			NA7		 1		1	 
+8		SOD			8		NA8			NA8		 1		1	 1.000   D_SOD  0  1.000
+9		SOD			9		NA9			NA9		 1		1	 1.000   D_SOD  0  1.000	 
+10		SOD			10		NA10			NA10		 1		1	 
+11		SOD			11		NA11			NA11		 1		1
+12		SOD			12		NA12			NA12		 1		1
+13		SOD			13		NA13			NA13		 1		1
+14		SOD			14		NA14			NA14		 1		1
+15		SOD			15		NA15			NA15		 1		1
+16		SOD			16		NA16			NA16		 1		1
+17		SOD			17		NA17			NA17		 1		1
+18		SOD			18		NA18			NA18		 1		1
+19		SOD			19		NA19			NA19		 1		1
+20		SOD			20		NA20			NA20		 1		1
+21		SOD			21		NA21			NA21		 1		1
+22		SOD			22		NA22			NA22		 1		1
+23		SOD			23		NA23			NA23		 1		1
+24		SOD			24		NA24			NA24		 1		1
+25		SOD			25		NA25			NA25		 1		1
+26		SOD			26		NA26			NA26		 1		1
+27		SOD			27		NA27			NA27		 1		1	 		 
+
+[ moleculetype ]
+; molname	nrexcl
+K		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		POT			1		K			K		 1		1		 
+
+[ moleculetype ]
+; molname	nrexcl
+CS		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		CES			1		Ces			Ces		 1		1		 
+
+[ moleculetype ]
+; molname	nrexcl
+CL		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		CLA			1		CL			CL		 1		-1	 
+
+[ moleculetype ]
+; molname	nrexcl
+CA		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		CAL			1		Cal			Cal		 1		2	
+
+[ moleculetype ]
+; molname	nrexcl
+MG		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge
+#ifdef MG_ALLNER
+; Use parameters from Allner et al. (DOI: 10.1021/ct3000734)
+1		MGA			1		MG			MG		 1		2
+#else
+; Standard CHARMM parameters
+1		MG			1		MG			MG		 1		2
+#endif
+
+[ moleculetype ]
+; molname	nrexcl
+ZN		1
+
+[ atoms ]
+; id	at type		res nr	residu name at name  cg nr	charge	 
+1		ZN			1		ZN			ZN		 1		2	
